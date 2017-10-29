@@ -1,5 +1,5 @@
 {
-    "name": "laravel-parsley",
+    "name": "cpk/laravel-parsley",
     "description": "Converts FormRequest rules to Parsley rules",
     "keywords": ["laravel", "laravel 5", "parsley", "parsleyjs", "html", "form", "collective"],
     "authors": [
