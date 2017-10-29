@@ -21,7 +21,7 @@ class LaravelParsleyServiceProvider extends HtmlServiceProvider
 	{
 		$this->app->singleton('form', function($app)
 		{
-			$form = new FormBuilder($app['html'], $app['url'], $app['session.store']->token());
+			$form = new FormBuilder($app['html'], $app['url'], $app['view'], $app['session.store']->token());
 
 			return $form->setSessionStore($app['session.store']);
 		});
