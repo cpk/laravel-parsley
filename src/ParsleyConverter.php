@@ -5,7 +5,7 @@ namespace LaravelParsley;
 use Illuminate\Translation\Translator;
 
 class ParsleyConverter {
-    use \Illuminate\Console\AppNamespaceDetectorTrait;
+    use \Illuminate\Console\DetectsApplicationNamespace;
 
     protected $rules            = [];
     protected $customAttributes = [];
