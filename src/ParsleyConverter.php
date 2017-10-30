@@ -2,6 +2,7 @@
 
 namespace LaravelParsley;
 
+use App\Helper\Language;
 use Illuminate\Translation\Translator;
 
 class ParsleyConverter {
@@ -192,7 +193,7 @@ class ParsleyConverter {
         $lowerRule = snake_case($currentRule);
         $customKey = "validation.custom.{$attribute}.{$lowerRule}";
 
-        $customMessage = $this->translator->trans($customKey);
+        $customMessage = Language::trans($customKey);
 
         if ($customMessage !== $customKey) {
             return $customMessage;
@@ -203,12 +204,11 @@ class ParsleyConverter {
                 $key = "validation.{$lowerRule}.string";
             }
 
-            return $this->translator->trans($key);
+            return Language::trans($key);
         }
 
         $key = "validation.{$lowerRule}";
-
-        if ($key != ($value = $this->translator->trans($key))) {
+        if ($key != ($value = Language::trans($key))) {
             return $value;
         }
 
