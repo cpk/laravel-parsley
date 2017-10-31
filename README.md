@@ -2,6 +2,7 @@ laravel-parsley
 ===============
 
 Converts [FormRequest](http://laravel.com/docs/5.0/validation#form-request-validation) rules to [Parsley](http://parsleyjs.org/) rules.
+Build on Madnh library
 
 
 ## Install
